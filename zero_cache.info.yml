@@ -3,3 +3,7 @@ description: Provides simple cache for static use
 package: zero
 type: module
 core_version_requirement: ^8.8.0 || ^9 || ^10
+version: 1.1.0
+
+dependencies:
+  - zero_preprocess:zero_preprocess

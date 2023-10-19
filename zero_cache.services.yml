@@ -3,3 +3,7 @@ services:
   zero_cache.service:
     class: Drupal\zero_cache\Service\ZeroCacheService
 
+  zero_cache.preprocess.extender:
+    class: Drupal\zero_cache\Extender\CacheApplyExtender
+    tags:
+      - { name: zero_preprocess_extender }
