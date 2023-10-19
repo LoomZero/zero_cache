@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Template\Attribute;
+use Drupal\zero_entitywrapper\Base\ContentWrapperInterface;
+use Drupal\zero_entitywrapper\Base\ViewWrapperInterface;
+use Drupal\zero_entitywrapper\Content\ContentWrapper;
+use Drupal\zero_entitywrapper\View\ViewWrapper;
+
+function zero_cache_page_attachments(array &$attachments) {
+  /** @var \Drupal\zero_cache\Service\ZeroCacheService $cache */
+  $cache = Drupal::service('zero_cache.service');
+
+  $cache->applyAttachments($attachments);
+}
+
+function zero_cache_preprocess_page(&$variables) {
+  /** @var \Drupal\zero_cache\Service\ZeroCacheService $cache */
+  $cache = Drupal::service('zero_cache.service');
+
+  $cache->applyCache($variables, TRUE);
+}

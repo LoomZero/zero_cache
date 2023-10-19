@@ -1,0 +1,5 @@
+services:
+
+  zero_cache.service:
+    class: Drupal\zero_cache\Service\ZeroCacheService
+
