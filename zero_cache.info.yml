@@ -2,7 +2,7 @@ name: Zero Cache
 description: Provides simple cache for static use
 package: zero
 type: module
-core_version_requirement: ^8.8.0 || ^9 || ^10
+core_version_requirement: ">=8"
 version: 1.1.0
 
 dependencies:
